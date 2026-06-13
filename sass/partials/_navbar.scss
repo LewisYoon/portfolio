@@ -16,7 +16,7 @@
   padding: 0 1.25em;
   z-index: 1000;
 
-  .logo {
+  .navbar__logo {
     font-family: f.$primary-text;
     font-size: 1em;
     font-weight: 700;
@@ -28,7 +28,7 @@
     }
   }
 
-  .menu {
+  .navbar__menu {
     display: flex;
     gap: 1em;
     list-style: none;
@@ -47,6 +47,9 @@
       }
     }
   }
+  span {
+    color: c.$color-green;
+  }
 
   @include m.breakpoint(desktop) {
     width: 13.75em;
@@ -58,11 +61,11 @@
     justify-content: flex-start;
     padding: 3.75em 0 0 2.5em;
 
-    .logo {
+    .navbar__logo {
       font-size: 1.5em;
     }
 
-    .menu {
+    .navbar__menu {
       flex-direction: column;
       gap: 1.875em;
       margin-top: 2.5em;
@@ -75,10 +78,10 @@
     }
 
     @include m.breakpoint(largescreen) {
-      .logo {
+      .navbar__logo {
         font-size: 2em;
       }
-      .menu {
+      .navbar__menu {
         gap: 2em;
         margin-top: 3em;
 
