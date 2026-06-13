@@ -217,29 +217,29 @@ body {
   padding: 0 1.25em;
   z-index: 1000;
 }
-.navbar .logo {
+.navbar .navbar__logo {
   font-family: "JetBrains Mono", monospace;
   font-size: 1em;
   font-weight: 700;
   color: #e2e2e2;
   text-decoration: none;
 }
-.navbar .logo span {
+.navbar .navbar__logo span {
   color: #3dd68c;
 }
-.navbar .menu {
+.navbar .navbar__menu {
   display: flex;
   gap: 1em;
   list-style: none;
 }
-.navbar .menu li a {
+.navbar .navbar__menu li a {
   font-family: "JetBrains Mono", monospace;
   font-size: 0.8125em;
   color: #e2e2e2;
   text-decoration: none;
   transition: color 0.2s;
 }
-.navbar .menu li a:hover {
+.navbar .navbar__menu li a:hover {
   color: #3dd68c;
 }
 @media (min-width: 768px) {
@@ -253,27 +253,27 @@ body {
     justify-content: flex-start;
     padding: 3.75em 0 0 2.5em;
   }
-  .navbar .logo {
+  .navbar .navbar__logo {
     font-size: 1.5em;
   }
-  .navbar .menu {
+  .navbar .navbar__menu {
     flex-direction: column;
     gap: 1.875em;
     margin-top: 2.5em;
   }
-  .navbar .menu li a {
+  .navbar .navbar__menu li a {
     font-size: 1em;
   }
 }
 @media (min-width: 768px) and (min-width: 1200px) {
-  .navbar .logo {
+  .navbar .navbar__logo {
     font-size: 2em;
   }
-  .navbar .menu {
+  .navbar .navbar__menu {
     gap: 2em;
     margin-top: 3em;
   }
-  .navbar .menu li a {
+  .navbar .navbar__menu li a {
     font-size: 1.5em;
   }
 }
