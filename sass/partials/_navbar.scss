@@ -47,6 +47,9 @@
       }
     }
   }
+  span {
+    color: c.$color-green;
+  }
 
   @include m.breakpoint(desktop) {
     width: 13.75em;

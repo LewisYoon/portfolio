@@ -242,6 +242,9 @@ body {
 .navbar .navbar__menu li a:hover {
   color: #3dd68c;
 }
+.navbar span {
+  color: #3dd68c;
+}
 @media (min-width: 768px) {
   .navbar {
     width: 13.75em;
