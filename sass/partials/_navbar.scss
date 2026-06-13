@@ -1,0 +1,101 @@
+@use "../variables/colors" as c;
+@use "../variables/fonts" as f;
+@use "../mixins/media" as m;
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3.5em;
+  background: c.$color-bg;
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid c.$border;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.25em;
+  z-index: 1000;
+
+  .logo {
+    font-family: f.$primary-text;
+    font-size: 1em;
+    font-weight: 700;
+    color: c.$primary-color;
+    text-decoration: none;
+
+    span {
+      color: c.$color-green;
+    }
+  }
+
+  .menu {
+    display: flex;
+    gap: 1em;
+    list-style: none;
+
+    li {
+      a {
+        font-family: f.$primary-text;
+        font-size: 0.8125em;
+        color: c.$primary-color;
+        text-decoration: none;
+        transition: color 0.2s;
+
+        &:hover {
+          color: c.$color-green;
+        }
+      }
+    }
+  }
+
+  @include m.breakpoint(desktop) {
+    width: 13.75em;
+    height: 100vh;
+    background: transparent;
+    border-bottom: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 3.75em 0 0 2.5em;
+
+    .logo {
+      font-size: 1.5em;
+    }
+
+    .menu {
+      flex-direction: column;
+      gap: 1.875em;
+      margin-top: 2.5em;
+
+      li {
+        a {
+          font-size: 1em;
+        }
+      }
+    }
+
+    @include m.breakpoint(largescreen) {
+      .logo {
+        font-size: 2em;
+      }
+      .menu {
+        gap: 2em;
+        margin-top: 3em;
+
+        li {
+          a {
+            font-size: 1.5em;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include m.breakpoint(desktop) {
+  .hero,
+  main section,
+  .footer {
+    padding-left: 13.75em;
+  }
+}

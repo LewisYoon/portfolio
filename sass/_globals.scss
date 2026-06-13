@@ -1,0 +1,18 @@
+@use "./variables/colors" as c;
+@use "./variables/fonts" as f;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background: c.$color-bg;
+  color: c.$primary-color;
+  font-family: f.$secondary-text;
+}
