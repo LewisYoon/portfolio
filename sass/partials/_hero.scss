@@ -1,0 +1,56 @@
+@use "../variables/colors" as c;
+@use "../variables/fonts" as f;
+@use "../mixins/media" as m;
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2.5em;
+  align-items: flex-end;
+  h1 {
+    font-family: f.$primary-text;
+    font-size: 4em;
+    color: c.$primary-color;
+    line-height: 1.1;
+    margin-bottom: 0.5em;
+
+    .hero__name {
+      &--green {
+        color: #3dd68c;
+      }
+
+      &--yellow {
+        color: #ffb84d;
+      }
+
+      &--red {
+        color: #ff6b6b;
+      }
+    }
+  }
+
+  p {
+    font-size: 0.9rem;
+    color: c.$secondary-color;
+    max-width: 600px;
+    line-height: 1.6;
+  }
+
+  @include m.breakpoint(desktop) {
+    padding: 5rem;
+    p {
+      font-size: 1em;
+    }
+  }
+  @include m.breakpoint(largescreen) {
+    padding: 10em;
+    h1 {
+      font-size: 5em;
+    }
+    p {
+      font-size: 1.5em;
+    }
+  }
+}

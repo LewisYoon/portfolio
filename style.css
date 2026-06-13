@@ -199,7 +199,7 @@ html {
 body {
   background: #0b0b0b;
   color: #e2e2e2;
-  font-family: "Inter", sans-serif;
+  font-family: "JetBrains Mono", monospace;
 }
 
 .navbar {
@@ -283,6 +283,55 @@ body {
   main section,
   .footer {
     padding-left: 13.75em;
+  }
+}
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2.5em;
+  align-items: flex-end;
+}
+.hero h1 {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 4em;
+  color: #e2e2e2;
+  line-height: 1.1;
+  margin-bottom: 0.5em;
+}
+.hero h1 .hero__name--green {
+  color: #3dd68c;
+}
+.hero h1 .hero__name--yellow {
+  color: #ffb84d;
+}
+.hero h1 .hero__name--red {
+  color: #ff6b6b;
+}
+.hero p {
+  font-size: 0.9rem;
+  color: #888888;
+  max-width: 600px;
+  line-height: 1.6;
+}
+@media (min-width: 768px) {
+  .hero {
+    padding: 5rem;
+  }
+  .hero p {
+    font-size: 1em;
+  }
+}
+@media (min-width: 1200px) {
+  .hero {
+    padding: 10em;
+  }
+  .hero h1 {
+    font-size: 5em;
+  }
+  .hero p {
+    font-size: 1.5em;
   }
 }
 
