@@ -338,4 +338,60 @@ body {
   }
 }
 
+.about {
+  padding: 5em 1.25em;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  min-height: 80vh;
+  justify-content: center;
+}
+.about__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+.about__title {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 2em;
+  color: #3dd68c;
+}
+.about__text {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #e2e2e2;
+  max-width: 100%;
+}
+.about .about__image {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about .about__image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+@media (min-width: 768px) {
+  .about {
+    flex-direction: row;
+    align-items: center;
+    padding: 20rem;
+    gap: 4em;
+  }
+  .about__content {
+    flex: 1;
+  }
+  .about__image-container {
+    flex: 1;
+    justify-content: flex-end;
+  }
+  .about__title {
+    font-size: 2.5em;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
