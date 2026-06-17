@@ -362,20 +362,14 @@ body {
   color: #e2e2e2;
   max-width: 100%;
 }
-.about__image-container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.about__image-container .about__image {
+.about .about__image {
   width: 100%;
   max-width: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.about__image-container .about__image img {
+.about .about__image img {
   width: 100%;
   height: auto;
   display: block;
