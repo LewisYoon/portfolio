@@ -1,0 +1,79 @@
+@use "../variables/colors" as c;
+@use "../variables/fonts" as f;
+@use "../mixins/media" as m;
+@use "../mixins/mixins";
+
+.projects {
+  min-height: 100vh;
+  padding: 5em 1.25em;
+
+  &__title {
+    @include mixins.title;
+  }
+  &__grid {
+    display: grid;
+
+    gap: 2em;
+  }
+  &__card {
+    border: 1px solid c.$border;
+    overflow: hidden;
+    background: lighten($color: c.$color-bg, $amount: 3);
+    border-radius: 8px;
+  }
+  &__image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 16/9;
+    border-bottom: 1px solid c.$border;
+  }
+  &__info {
+    padding: 1.5;
+    h3 {
+      font-size: 1.25em;
+
+      margin: 0.5em;
+    }
+
+    p {
+      font-size: 0.9em;
+      color: c.$secondary-color;
+      line-height: 1.6;
+    }
+  }
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    padding: 1em 0.5em;
+
+    span {
+      font-size: 0.75em;
+      color: c.$color-green;
+      background: rgba(61, 214, 140, 0.1);
+      padding: 0.25em 0.75em;
+      border-radius: 4px;
+    }
+  }
+  @include m.breakpoint(desktop) {
+    padding: 5rem;
+
+    &__title {
+      font-size: 2.5em;
+    }
+
+    &__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @include m.breakpoint(largescreen) {
+    padding: 10em;
+
+    &__grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}

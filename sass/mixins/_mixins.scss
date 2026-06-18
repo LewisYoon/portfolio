@@ -1,0 +1,9 @@
+@use "../variables/colors" as c;
+@use "../variables/fonts" as f;
+
+@mixin title {
+  font-family: f.$primary-text;
+  font-size: 2em;
+  color: c.$color-green;
+  margin-bottom: 2em;
+}
