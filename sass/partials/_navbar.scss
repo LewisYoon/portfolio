@@ -30,13 +30,13 @@
 
   .navbar__menu {
     display: flex;
-    gap: 1em;
+    gap: 0.5em;
     list-style: none;
 
     li {
       a {
         font-family: f.$primary-text;
-        font-size: 0.8125em;
+        font-size: 0.7em;
         color: c.$primary-color;
         text-decoration: none;
         transition: color 0.2s;
@@ -87,7 +87,7 @@
 
         li {
           a {
-            font-size: 1.5em;
+            font-size: 1.25em;
           }
         }
       }

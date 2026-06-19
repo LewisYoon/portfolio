@@ -22,7 +22,11 @@
       }
 
       &--yellow {
-        color: #ffb84d;
+        background: radial-gradient(circle, dodgerblue, yellow);
+        background-size: 200% auto;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
       }
 
       &--red {

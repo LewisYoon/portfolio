@@ -46,7 +46,7 @@
   @include m.breakpoint(desktop) {
     flex-direction: row;
     align-items: center;
-    padding: 20rem;
+    padding: 5rem;
     gap: 4em;
 
     &__content {
