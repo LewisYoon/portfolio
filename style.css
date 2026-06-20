@@ -400,6 +400,9 @@ body {
   }
 }
 
+.skills {
+  padding: 5em 1.25em;
+}
 .skills__title {
   font-family: "JetBrains Mono", monospace;
   font-size: 2em;
@@ -448,6 +451,7 @@ body {
 
 .projects {
   min-height: 100vh;
+  padding: 5em 1.25em;
 }
 .projects__title {
   font-family: "JetBrains Mono", monospace;
@@ -512,6 +516,56 @@ body {
 @media (min-width: 1200px) {
   .projects__grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.contact {
+  padding: 5em 1.25em;
+}
+.contact__title {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 2em;
+  color: #3dd68c;
+  margin-bottom: 2em;
+}
+.contact__grid {
+  display: grid;
+  gap: 2em;
+}
+.contact__card {
+  background: rgb(18.65, 18.65, 18.65);
+  border: 1px solid #1f1f1f;
+  border-radius: 8px;
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75em;
+  text-decoration: none;
+}
+.contact__card h3 {
+  font-size: 1.1em;
+  color: #e2e2e2;
+}
+.contact__card p {
+  font-size: 0.9em;
+  color: #888888;
+  word-break: break-all;
+}
+.contact__icon {
+  font-size: 1.5em;
+  color: #3dd68c;
+  margin-bottom: 0.25em;
+}
+@media (min-width: 768px) {
+  .contact {
+    padding: 5rem;
+  }
+  .contact__title {
+    font-size: 2.5em;
+  }
+  .contact__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
   }
 }
 

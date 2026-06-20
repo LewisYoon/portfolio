@@ -5,6 +5,7 @@
 
 .projects {
   min-height: 100vh;
+  padding: 5em 1.25em;
   &__title {
     @include mixins.title;
   }
