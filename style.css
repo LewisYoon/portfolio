@@ -579,16 +579,20 @@ body {
   overflow: hidden;
   background: rgb(18.65, 18.65, 18.65);
   border-radius: 8px;
+  transition: all 0.3s ease;
 }
 .projects__card:hover {
-  transition: all 0.3s ease;
   transform: translateY(-6px) scale(1.05);
   border-color: #3dd68c;
   background-color: black;
   box-shadow: 0 10px 30px rgba(0, 255, 170, 0.12);
 }
-.projects__card:hover h3 {
+.projects__card:hover .projects__info h3 {
   color: #3dd68c;
+}
+.projects__link {
+  display: block;
+  text-decoration: none;
 }
 .projects__image {
   width: 100%;
@@ -599,7 +603,7 @@ body {
   border-bottom: 1px solid #1f1f1f;
 }
 .projects__info {
-  padding: 1.5;
+  padding: 1.5em;
 }
 .projects__info h3 {
   font-size: 1.25em;
