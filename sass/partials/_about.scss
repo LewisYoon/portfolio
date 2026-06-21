@@ -1,6 +1,7 @@
 @use "../variables/colors" as c;
 @use "../variables/fonts" as f;
 @use "../mixins/media" as m;
+@use "../mixins/mixins";
 
 .about {
   padding: 5em 1.25em;
@@ -17,9 +18,7 @@
   }
 
   &__title {
-    font-family: f.$primary-text;
-    font-size: 2em;
-    color: c.$color-green;
+    @include mixins.title;
   }
 
   &__text {
