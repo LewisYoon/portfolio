@@ -229,12 +229,12 @@ body {
 }
 .navbar .navbar__menu {
   display: flex;
-  gap: 1em;
+  gap: 0.5em;
   list-style: none;
 }
 .navbar .navbar__menu li a {
   font-family: "JetBrains Mono", monospace;
-  font-size: 0.8125em;
+  font-size: 0.7em;
   color: #e2e2e2;
   text-decoration: none;
   transition: color 0.2s;
@@ -277,7 +277,7 @@ body {
     margin-top: 3em;
   }
   .navbar .navbar__menu li a {
-    font-size: 1.5em;
+    font-size: 1.25em;
   }
 }
 
@@ -308,7 +308,11 @@ body {
   color: #3dd68c;
 }
 .hero h1 .hero__name--yellow {
-  color: #ffb84d;
+  background: radial-gradient(circle, dodgerblue, yellow);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 .hero h1 .hero__name--red {
   color: #ff6b6b;
@@ -381,7 +385,7 @@ body {
   .about {
     flex-direction: row;
     align-items: center;
-    padding: 20rem;
+    padding: 5rem;
     gap: 4em;
   }
   .about__content {
