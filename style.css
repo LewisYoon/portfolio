@@ -569,4 +569,37 @@ body {
   }
 }
 
+.footer {
+  padding: 2em;
+  border-top: 1px solid white;
+}
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__socials {
+  display: flex;
+  gap: 1.5rem;
+}
+.footer__socials a {
+  color: white;
+  font-size: 1.5rem;
+  transition: transform 0.3s;
+}
+.footer__socials a:hover {
+  transform: translateY(-3px);
+}
+@media (min-width: 768px) {
+  .footer {
+    font-size: 1.25em;
+  }
+  .footer .footer__container {
+    margin-left: 10em;
+  }
+  .footer a {
+    font-size: 1.8rem;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
