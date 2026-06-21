@@ -457,12 +457,15 @@ body {
   display: block;
   object-fit: cover;
 }
+.about .about__image img:hover {
+  animation: spin 1s ease infinite;
+}
 @media (min-width: 800px) {
   .about {
     flex-direction: row;
     align-items: center;
     padding: 5rem;
-    gap: 4em;
+    gap: 5em;
   }
   .about__content {
     flex: 1;
@@ -475,7 +478,26 @@ body {
     font-size: 2.5em;
   }
 }
+@media (min-width: 1200px) {
+  .about {
+    gap: 20em;
+  }
+  .about__text {
+    font-size: 1.25rem;
+  }
+}
 
+@keyframes spin {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(25deg) scale(1.05);
+  }
+  75% {
+    transform: rotate(-25deg) scale(1.05);
+  }
+}
 .skills {
   padding: 5em 1.25em;
 }
