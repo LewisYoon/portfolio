@@ -3,19 +3,19 @@
 @use "../mixins/media" as m;
 @use "../mixins/mixins";
 
-.skills {
+.contact {
   padding: 5em 1.25em;
+
   &__title {
     @include mixins.title;
   }
 
   &__grid {
     display: grid;
-
     gap: 2em;
   }
 
-  &__category {
+  &__card {
     background: lighten(c.$color-bg, 3%);
     border: 1px solid c.$border;
     border-radius: 8px;
@@ -23,6 +23,7 @@
     display: flex;
     flex-direction: column;
     gap: 0.75em;
+    text-decoration: none;
 
     h3 {
       font-size: 1.1em;
@@ -32,7 +33,7 @@
     p {
       font-size: 0.9em;
       color: c.$secondary-color;
-      line-height: 1.6;
+      word-break: break-all;
     }
   }
 
