@@ -19,6 +19,18 @@
     overflow: hidden;
     background: lighten($color: c.$color-bg, $amount: 3);
     border-radius: 8px;
+    &:hover {
+      transition: all 0.3s ease;
+      transform: translateY(-6px) scale(1.05);
+
+      border-color: c.$color-green;
+      background-color: black;
+      box-shadow: 0 10px 30px rgba(0, 255, 170, 0.12);
+
+      h3 {
+        color: c.$color-green;
+      }
+    }
   }
   &__image {
     width: 100%;

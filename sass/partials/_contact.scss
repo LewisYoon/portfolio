@@ -35,6 +35,18 @@
       color: c.$secondary-color;
       word-break: break-all;
     }
+    &:hover {
+      transition: all 0.3s ease;
+      transform: translateY(-6px) scale(1.05);
+
+      border-color: c.$color-green;
+      background-color: black;
+      box-shadow: 0 10px 30px rgba(0, 255, 170, 0.12);
+
+      h3 {
+        color: c.$color-green;
+      }
+    }
   }
 
   &__icon {

@@ -1,6 +1,6 @@
 @mixin breakpoint($size) {
   @if $size == desktop {
-    @media (min-width: 768px) {
+    @media (min-width: 800px) {
       @content;
     }
   } @else if $size == largescreen {

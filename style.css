@@ -245,7 +245,7 @@ body {
 .navbar span {
   color: #3dd68c;
 }
-@media (min-width: 768px) {
+@media (min-width: 800px) {
   .navbar {
     width: 13.75em;
     height: 100vh;
@@ -268,7 +268,7 @@ body {
     font-size: 1em;
   }
 }
-@media (min-width: 768px) and (min-width: 1200px) {
+@media (min-width: 800px) and (min-width: 1200px) {
   .navbar .navbar__logo {
     font-size: 2em;
   }
@@ -281,7 +281,7 @@ body {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 800px) {
   .hero,
   main,
   section,
@@ -313,9 +313,15 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  animation: gradient 5s linear infinite;
 }
 .hero h1 .hero__name--red {
   color: #ff6b6b;
+}
+.hero h1 .hero__name--red::after {
+  content: "_";
+  color: #e2e2e2;
+  animation: blink 0.8s infinite;
 }
 .hero p {
   font-size: 0.9rem;
@@ -323,12 +329,21 @@ body {
   max-width: 600px;
   line-height: 1.6;
 }
-@media (min-width: 768px) {
+@media (min-width: 800px) {
   .hero {
     padding: 5rem;
   }
   .hero p {
     font-size: 1em;
+    margin-left: 10em;
+  }
+  .hero .hero__name--typing {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 9s steps(13) infinite, cursor 0.8s infinite;
+    background-color: blue;
+    border-right: 3px solid white;
   }
 }
 @media (min-width: 1200px) {
@@ -343,6 +358,67 @@ body {
   }
 }
 
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  40% {
+    width: 13ch;
+  }
+  80% {
+    width: 13ch;
+  }
+  100% {
+    width: 0;
+  }
+}
+@keyframes highlight {
+  0% {
+    left: -100%;
+  }
+  40% {
+    left: 0;
+  }
+  80% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
+  }
+}
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 100;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes cursor {
+  50% {
+    border-color: transparent;
+  }
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
 .about {
   padding: 5em 1.25em;
   display: flex;
@@ -381,7 +457,7 @@ body {
   display: block;
   object-fit: cover;
 }
-@media (min-width: 768px) {
+@media (min-width: 800px) {
   .about {
     flex-direction: row;
     align-items: center;
@@ -431,12 +507,25 @@ body {
   color: #888888;
   line-height: 1.6;
 }
+.skills__category p i {
+  font-size: 4em;
+}
+.skills__category:hover {
+  transition: all 0.3s ease;
+  transform: translateY(-6px) scale(1.05);
+  border-color: #3dd68c;
+  background-color: black;
+  box-shadow: 0 10px 30px rgba(0, 255, 170, 0.12);
+}
+.skills__category:hover h3 {
+  color: #3dd68c;
+}
 .skills__icon {
   font-size: 1.5em;
   color: #3dd68c;
   margin-bottom: 0.25em;
 }
-@media (min-width: 768px) {
+@media (min-width: 800px) {
   .skills {
     padding: 5rem;
   }
@@ -468,6 +557,16 @@ body {
   overflow: hidden;
   background: rgb(18.65, 18.65, 18.65);
   border-radius: 8px;
+}
+.projects__card:hover {
+  transition: all 0.3s ease;
+  transform: translateY(-6px) scale(1.05);
+  border-color: #3dd68c;
+  background-color: black;
+  box-shadow: 0 10px 30px rgba(0, 255, 170, 0.12);
+}
+.projects__card:hover h3 {
+  color: #3dd68c;
 }
 .projects__image {
   width: 100%;
@@ -502,7 +601,7 @@ body {
   padding: 0.25em 0.75em;
   border-radius: 4px;
 }
-@media (min-width: 768px) {
+@media (min-width: 800px) {
   .projects {
     padding: 5rem;
   }
@@ -551,12 +650,22 @@ body {
   color: #888888;
   word-break: break-all;
 }
+.contact__card:hover {
+  transition: all 0.3s ease;
+  transform: translateY(-6px) scale(1.05);
+  border-color: #3dd68c;
+  background-color: black;
+  box-shadow: 0 10px 30px rgba(0, 255, 170, 0.12);
+}
+.contact__card:hover h3 {
+  color: #3dd68c;
+}
 .contact__icon {
   font-size: 1.5em;
   color: #3dd68c;
   margin-bottom: 0.25em;
 }
-@media (min-width: 768px) {
+@media (min-width: 800px) {
   .contact {
     padding: 5rem;
   }
@@ -590,7 +699,7 @@ body {
 .footer__socials a:hover {
   transform: translateY(-3px);
 }
-@media (min-width: 768px) {
+@media (min-width: 800px) {
   .footer {
     font-size: 1.25em;
   }
